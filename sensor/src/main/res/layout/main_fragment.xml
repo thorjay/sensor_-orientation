@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_start"
+        android:text="开始测量"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:text="结束测量"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_start"
+        app:layout_constraintStart_toStartOf="@id/btn_start"/>
+
+    <TextView
+        android:id="@+id/angle_azimuth"
+        android:hint="方位角(绕z轴)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/btn_stop"
+        app:layout_constraintTop_toBottomOf="@id/btn_stop"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/angle_pitch"
+        android:hint="俯仰角(绕x轴)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/btn_stop"
+        app:layout_constraintTop_toBottomOf="@id/angle_azimuth"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/angle_heel"
+        android:hint="俯仰角(绕y轴)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/btn_stop"
+        app:layout_constraintTop_toBottomOf="@id/angle_pitch"
+        android:layout_marginTop="5dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

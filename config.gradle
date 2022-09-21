@@ -1,0 +1,84 @@
+// 版本依赖管理
+ext{
+
+    //App版本
+    appVersion = [
+            compileSdkVersion : 30,
+            buildToolsVersion : "30.0.2",
+            minSdkVersion : 21,
+            targetSdkVersion : 23,
+            versionCode :  1,
+            versionName : "4.0.1"
+    ]
+
+    //Libraries
+    rxjava = "2.2.7"
+    rxandroid = "2.1.1"
+    okhttp = "4.3.1"
+    fastjson = '1.1.71.android'
+    unirest = "1.0"
+    replugin = '2.2.4'
+
+    //AndroidX的依赖包
+    androidX = [
+            appcompat : 'androidx.appcompat:appcompat:1.1.0',
+            exifinterface : 'androidx.exifinterface:exifinterface:1.0.0',
+            v4 : 'androidx.legacy:legacy-support-v4:1.0.0',
+            annotations : 'androidx.annotation:annotation:1.2.0',
+            core : 'androidx.core:core:1.1.0',
+            recyclerview : 'androidx.recyclerview:recyclerview:1.1.0',
+            fragment : 'androidx.fragment:fragment:1.3.6',
+            exifinterface : 'androidx.exifinterface:exifinterface:1.3.2'
+    ]
+
+    //AndroidSupport依赖包
+    androidSupport = [
+            annotations : "com.android.support:support-annotations:27.0.1",
+            v4 : "com.android.support:support-v4:27.0.1",
+            exifinterface : "com.android.support:exifinterface:27.1.0", // for RN camera
+            v7 : 'com.android.support:appcompat-v7:28.0.0'
+    ]
+
+    //RN 依赖包
+    rn = [
+            react_native : 'com.facebook.react:react-native:+',
+            react_native_0_58_5 :'com.facebook.react:react-native-jar:0.58.5',//react-native 0.58.5版本
+    ]
+
+    //第三方依赖包
+    libraries = [
+            //rxjava +
+            rxjava : "io.reactivex.rxjava2:rxjava:" + "${rxjava}",
+            rx_streams : 'org.reactivestreams:reactive-streams:1.0.2',
+            //rxandroid +
+            rxandroid : "io.reactivex.rxjava2:rxandroid:" + "$rxandroid",
+            //okhttp =
+            okhttp : "com.squareup.okhttp3:okhttp:" + "$okhttp",
+            //fastjson +
+            fastjson : 'com.alibaba:fastjson:' + "$fastjson",
+            //unirest +
+            unirest : "com:unirest-for-android:" + "$unirest",
+            //xxpermission
+            xxpermission : 'com.github.getActivity:XXPermissions:12.8',
+            //room
+            room_runtime : "androidx.room:room-runtime:2.3.0",
+            room_compiler: "androidx.room:room-compiler:2.3.0",
+            lifecyle_livedata : "androidx.lifecycle:lifecycle-livedata:2.1.0",
+            //glide
+            glide : "com.github.bumptech.glide:glide:4.12.0",
+            //timber
+            timber: 'com.jakewharton.timber:timber:5.0.1',
+
+            android_lite_http : "android:android-lite-http:1.0",
+            silicompressor : 'com.iceteck.silicompressorr:silicompressor:2.2.1'
+    ]
+
+    //测试依赖包
+    test = [
+            junit :'junit:junit:4.12',
+            androidJunit : 'androidx.test.ext:junit:1.1.1',
+            espresso : 'androidx.test.espresso:espresso-core:3.2.0',
+            room_testing:  "androidx.room:room-testing:2.2.5"
+    ]
+
+}
